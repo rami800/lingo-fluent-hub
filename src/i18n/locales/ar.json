@@ -1,0 +1,108 @@
+{
+  "app": {
+    "name": "تعلم الألمانية",
+    "tagline": "تعلم الألمانية بطريقة طبيعية"
+  },
+  "common": {
+    "continue": "استمر",
+    "start": "ابدأ",
+    "next": "التالي",
+    "previous": "السابق",
+    "back": "رجوع",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "retry": "حاول مرة أخرى",
+    "complete": "مكتمل",
+    "progress": "التقدم",
+    "lesson": "درس",
+    "lessons": "دروس",
+    "minutes": "دقائق",
+    "of": "من"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "learn": "تعلم",
+    "profile": "الملف الشخصي",
+    "progress": "التقدم",
+    "settings": "الإعدادات"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "createAccount": "إنشاء حساب",
+    "welcomeBack": "مرحباً بعودتك!",
+    "getStarted": "ابدأ مجاناً"
+  },
+  "onboarding": {
+    "welcome": "مرحباً بك في تعلم الألمانية",
+    "subtitle": "أتقن الألمانية من خلال مواقف الحياة الحقيقية",
+    "chooseLanguage": "اختر لغتك",
+    "chooseLevel": "ما هو مستواك في الألمانية؟",
+    "levelHelp": "لا تقلق، يمكنك تغيير هذا لاحقاً"
+  },
+  "levels": {
+    "A1": {
+      "name": "مبتدئ",
+      "description": "كلمات وعبارات بسيطة وجمل أساسية"
+    },
+    "A2": {
+      "name": "أساسي",
+      "description": "تعبيرات يومية ومهام روتينية"
+    },
+    "B1": {
+      "name": "متوسط",
+      "description": "النقاط الرئيسية في المواضيع المألوفة"
+    }
+  },
+  "scenarios": {
+    "transport": "وسائل النقل العام",
+    "doctor": "عند الطبيب",
+    "work": "في العمل",
+    "shopping": "التسوق",
+    "restaurant": "في المطعم",
+    "housing": "البحث عن سكن",
+    "bank": "في البنك",
+    "emergency": "حالات الطوارئ",
+    "introduction": "تقديم نفسك",
+    "directions": "السؤال عن الاتجاهات"
+  },
+  "lesson": {
+    "listenAndRepeat": "استمع وكرر",
+    "playAudio": "تشغيل الصوت",
+    "stopAudio": "إيقاف الصوت",
+    "startRecording": "سجل صوتك",
+    "stopRecording": "إيقاف التسجيل",
+    "yourPronunciation": "نطقك",
+    "tryAgain": "حاول مرة أخرى",
+    "wellDone": "أحسنت!",
+    "keepPracticing": "استمر في التدريب!",
+    "step": "خطوة",
+    "completed": "اكتمل الدرس!",
+    "continueToNext": "انتقل للدرس التالي"
+  },
+  "profile": {
+    "title": "ملفك الشخصي",
+    "currentLevel": "المستوى الحالي",
+    "uiLanguage": "لغة التطبيق",
+    "lessonsCompleted": "الدروس المكتملة",
+    "totalProgress": "التقدم الكلي",
+    "streak": "أيام متتالية",
+    "editProfile": "تعديل الملف الشخصي"
+  },
+  "install": {
+    "title": "تثبيت التطبيق",
+    "subtitle": "أضف تعلم الألمانية إلى شاشتك الرئيسية للحصول على أفضل تجربة",
+    "instructions": "اضغط على زر المشاركة واختر 'إضافة إلى الشاشة الرئيسية'",
+    "dismiss": "ربما لاحقاً"
+  }
+}
