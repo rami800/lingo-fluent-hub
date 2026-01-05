@@ -1,0 +1,108 @@
+{
+  "app": {
+    "name": "Almanca Öğren",
+    "tagline": "Almancayı doğal yoldan öğrenin"
+  },
+  "common": {
+    "continue": "Devam",
+    "start": "Başla",
+    "next": "İleri",
+    "previous": "Geri",
+    "back": "Geri",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar dene",
+    "complete": "Tamamlandı",
+    "progress": "İlerleme",
+    "lesson": "Ders",
+    "lessons": "Dersler",
+    "minutes": "dakika",
+    "of": "/"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "learn": "Öğren",
+    "profile": "Profil",
+    "progress": "İlerleme",
+    "settings": "Ayarlar"
+  },
+  "auth": {
+    "login": "Giriş Yap",
+    "signup": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre Onayı",
+    "forgotPassword": "Şifreni mi unuttun?",
+    "noAccount": "Hesabın yok mu?",
+    "hasAccount": "Zaten hesabın var mı?",
+    "createAccount": "Hesap Oluştur",
+    "welcomeBack": "Tekrar hoş geldin!",
+    "getStarted": "Ücretsiz başla"
+  },
+  "onboarding": {
+    "welcome": "Almanca Öğren'e Hoş Geldin",
+    "subtitle": "Gerçek hayat senaryoları ile Almanca öğren",
+    "chooseLanguage": "Dilinizi seçin",
+    "chooseLevel": "Almanca seviyen ne?",
+    "levelHelp": "Merak etme, bunu sonra değiştirebilirsin"
+  },
+  "levels": {
+    "A1": {
+      "name": "Başlangıç",
+      "description": "Temel kelimeler, ifadeler ve basit cümleler"
+    },
+    "A2": {
+      "name": "Temel",
+      "description": "Günlük ifadeler ve rutin görevler"
+    },
+    "B1": {
+      "name": "Orta",
+      "description": "Tanıdık konularda ana noktalar"
+    }
+  },
+  "scenarios": {
+    "transport": "Toplu Taşıma",
+    "doctor": "Doktorda",
+    "work": "İş Yerinde",
+    "shopping": "Alışveriş",
+    "restaurant": "Restoranda",
+    "housing": "Ev Arama",
+    "bank": "Bankada",
+    "emergency": "Acil Durumlar",
+    "introduction": "Kendini Tanıtma",
+    "directions": "Yol Sorma"
+  },
+  "lesson": {
+    "listenAndRepeat": "Dinle ve tekrarla",
+    "playAudio": "Sesi çal",
+    "stopAudio": "Sesi durdur",
+    "startRecording": "Sesini kaydet",
+    "stopRecording": "Kaydı durdur",
+    "yourPronunciation": "Telaffuzun",
+    "tryAgain": "Tekrar dene",
+    "wellDone": "Aferin!",
+    "keepPracticing": "Pratik yapmaya devam et!",
+    "step": "Adım",
+    "completed": "Ders tamamlandı!",
+    "continueToNext": "Sonraki derse devam et"
+  },
+  "profile": {
+    "title": "Profilin",
+    "currentLevel": "Mevcut Seviye",
+    "uiLanguage": "Uygulama Dili",
+    "lessonsCompleted": "Tamamlanan Dersler",
+    "totalProgress": "Toplam İlerleme",
+    "streak": "Günlük Seri",
+    "editProfile": "Profili Düzenle"
+  },
+  "install": {
+    "title": "Uygulamayı Yükle",
+    "subtitle": "En iyi deneyim için Almanca Öğren'i ana ekranına ekle",
+    "instructions": "Paylaş düğmesine dokun ve 'Ana Ekrana Ekle' seç",
+    "dismiss": "Belki sonra"
+  }
+}

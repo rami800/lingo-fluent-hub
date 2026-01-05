@@ -1,0 +1,108 @@
+{
+  "app": {
+    "name": "Deutsch Lernen",
+    "tagline": "Learn German the natural way"
+  },
+  "common": {
+    "continue": "Continue",
+    "start": "Start",
+    "next": "Next",
+    "previous": "Previous",
+    "back": "Back",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "complete": "Complete",
+    "progress": "Progress",
+    "lesson": "Lesson",
+    "lessons": "Lessons",
+    "minutes": "minutes",
+    "of": "of"
+  },
+  "nav": {
+    "home": "Home",
+    "learn": "Learn",
+    "profile": "Profile",
+    "progress": "Progress",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "createAccount": "Create Account",
+    "welcomeBack": "Welcome back!",
+    "getStarted": "Get started for free"
+  },
+  "onboarding": {
+    "welcome": "Welcome to Deutsch Lernen",
+    "subtitle": "Master German through real-life scenarios",
+    "chooseLanguage": "Choose your language",
+    "chooseLevel": "What's your German level?",
+    "levelHelp": "Don't worry, you can change this later"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Basic words, phrases, and simple sentences"
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Everyday expressions and routine tasks"
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Main points on familiar matters"
+    }
+  },
+  "scenarios": {
+    "transport": "Public Transport",
+    "doctor": "At the Doctor",
+    "work": "At Work",
+    "shopping": "Shopping",
+    "restaurant": "At the Restaurant",
+    "housing": "Finding Housing",
+    "bank": "At the Bank",
+    "emergency": "Emergencies",
+    "introduction": "Introducing Yourself",
+    "directions": "Asking for Directions"
+  },
+  "lesson": {
+    "listenAndRepeat": "Listen and repeat",
+    "playAudio": "Play audio",
+    "stopAudio": "Stop audio",
+    "startRecording": "Record your voice",
+    "stopRecording": "Stop recording",
+    "yourPronunciation": "Your pronunciation",
+    "tryAgain": "Try again",
+    "wellDone": "Well done!",
+    "keepPracticing": "Keep practicing!",
+    "step": "Step",
+    "completed": "Lesson completed!",
+    "continueToNext": "Continue to next lesson"
+  },
+  "profile": {
+    "title": "Your Profile",
+    "currentLevel": "Current Level",
+    "uiLanguage": "App Language",
+    "lessonsCompleted": "Lessons Completed",
+    "totalProgress": "Total Progress",
+    "streak": "Day Streak",
+    "editProfile": "Edit Profile"
+  },
+  "install": {
+    "title": "Install the App",
+    "subtitle": "Add Deutsch Lernen to your home screen for the best experience",
+    "instructions": "Tap the share button and select 'Add to Home Screen'",
+    "dismiss": "Maybe later"
+  }
+}
