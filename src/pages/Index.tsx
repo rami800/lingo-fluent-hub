@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useApp } from '@/context/AppContext';
 import { LanguageSelector } from '@/components/LanguageSelector';
@@ -8,12 +9,14 @@ import { LessonPlayer } from '@/components/LessonPlayer';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Settings } from 'lucide-react';
 import { lessons } from '@/data/mockData';
 
 type Screen = 'welcome' | 'language' | 'level' | 'home' | 'scenario' | 'lesson';
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { isOnboarding, setIsOnboarding } = useApp();
   const [screen, setScreen] = useState<Screen>(isOnboarding ? 'welcome' : 'home');
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null);
@@ -101,9 +104,14 @@ const Index = () => {
             exit={{ opacity: 0 }}
             className="min-h-screen pb-24"
           >
-            <header className="p-4 pt-6 safe-top">
-              <h1 className="text-2xl font-bold">{t('app.name')}</h1>
-              <p className="text-muted-foreground">{t('app.tagline')}</p>
+            <header className="p-4 pt-6 safe-top flex items-center justify-between">
+              <div>
+                <h1 className="text-2xl font-bold">{t('app.name')}</h1>
+                <p className="text-muted-foreground">{t('app.tagline')}</p>
+              </div>
+              <Button variant="ghost" size="icon" onClick={() => navigate('/settings')}>
+                <Settings className="h-5 w-5" />
+              </Button>
             </header>
             <main className="p-4">
               <ScenarioList onSelectScenario={handleSelectScenario} />
