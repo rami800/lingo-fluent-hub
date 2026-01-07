@@ -1,5 +1,5 @@
 export type SupportedLanguage = 'ar' | 'tr' | 'uk' | 'en';
-export type GermanLevel = 'A1' | 'A2' | 'B1';
+export type GermanLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 
 export interface User {
   id: string;

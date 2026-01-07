@@ -18,6 +18,9 @@ export function LevelSelector({ onComplete }: LevelSelectorProps) {
     'A1': 'bg-level-a1',
     'A2': 'bg-level-a2',
     'B1': 'bg-level-b1',
+    'B2': 'bg-level-b2',
+    'C1': 'bg-level-c1',
+    'C2': 'bg-level-c2',
   };
 
   const handleSelect = (levelId: GermanLevel) => {
