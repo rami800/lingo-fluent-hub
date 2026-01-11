@@ -5,12 +5,12 @@ import { useApp } from '@/context/AppContext';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { LevelSelector } from '@/components/LevelSelector';
 import { ScenarioList } from '@/components/ScenarioList';
+import { LessonSelector } from '@/components/LessonSelector';
 import { LessonPlayer } from '@/components/LessonPlayer';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
-import { lessons } from '@/data/mockData';
 
 type Screen = 'welcome' | 'language' | 'level' | 'home' | 'scenario' | 'lesson';
 
@@ -32,15 +32,22 @@ const Index = () => {
 
   const handleSelectScenario = (scenarioId: string) => {
     setSelectedScenario(scenarioId);
-    const scenarioLessons = lessons.filter(l => l.scenarioId === scenarioId);
-    if (scenarioLessons.length > 0) {
-      setSelectedLesson(scenarioLessons[0].id);
-      setScreen('lesson');
-    }
+    setScreen('scenario');
+  };
+
+  const handleSelectLesson = (lessonId: string) => {
+    setSelectedLesson(lessonId);
+    setScreen('lesson');
   };
 
   const handleLessonComplete = () => {
+    setScreen('scenario');
+    setSelectedLesson(null);
+  };
+
+  const handleBackToHome = () => {
     setScreen('home');
+    setSelectedScenario(null);
     setSelectedLesson(null);
   };
 
@@ -104,7 +111,7 @@ const Index = () => {
             exit={{ opacity: 0 }}
             className="min-h-screen pb-24"
           >
-            <header className="p-4 pt-6 safe-top flex items-center justify-between">
+            <header className="p-4 pt-6 flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold">{t('app.name')}</h1>
                 <p className="text-muted-foreground">{t('app.tagline')}</p>
@@ -120,18 +127,34 @@ const Index = () => {
           </motion.div>
         )}
 
+        {screen === 'scenario' && selectedScenario && (
+          <motion.div
+            key="scenario"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            className="min-h-screen p-4 pt-6"
+          >
+            <LessonSelector
+              scenarioId={selectedScenario}
+              onSelectLesson={handleSelectLesson}
+              onBack={handleBackToHome}
+            />
+          </motion.div>
+        )}
+
         {screen === 'lesson' && selectedLesson && (
           <motion.div
             key="lesson"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="min-h-screen p-4 pt-6 safe-top"
+            className="min-h-screen p-4 pt-6"
           >
             <LessonPlayer
               lessonId={selectedLesson}
               onComplete={handleLessonComplete}
-              onBack={() => setScreen('home')}
+              onBack={() => setScreen('scenario')}
             />
           </motion.div>
         )}

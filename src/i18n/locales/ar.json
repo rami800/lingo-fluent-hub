@@ -19,6 +19,7 @@
     "progress": "التقدم",
     "lesson": "درس",
     "lessons": "دروس",
+    "scenarios": "سيناريوهات",
     "minutes": "دقائق",
     "of": "من"
   },
@@ -74,7 +75,12 @@
     "bank": "في البنك",
     "emergency": "حالات الطوارئ",
     "introduction": "تقديم نفسك",
-    "directions": "السؤال عن الاتجاهات"
+    "directions": "السؤال عن الاتجاهات",
+    "noScenarios": "لا توجد سيناريوهات لهذا المستوى"
+  },
+  "lessons": {
+    "selectLesson": "اختر درساً",
+    "noLessons": "لا توجد دروس متاحة"
   },
   "lesson": {
     "listenAndRepeat": "استمع وكرر",
@@ -88,7 +94,9 @@
     "keepPracticing": "استمر في التدريب!",
     "step": "خطوة",
     "completed": "اكتمل الدرس!",
-    "continueToNext": "انتقل للدرس التالي"
+    "continueToNext": "انتقل للدرس التالي",
+    "vocabulary": "المفردات",
+    "noContent": "لا يوجد محتوى لهذا الدرس"
   },
   "profile": {
     "title": "ملفك الشخصي",
