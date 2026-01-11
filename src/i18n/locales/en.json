@@ -19,6 +19,7 @@
     "progress": "Progress",
     "lesson": "Lesson",
     "lessons": "Lessons",
+    "scenarios": "Scenarios",
     "minutes": "minutes",
     "of": "of"
   },
@@ -74,7 +75,12 @@
     "bank": "At the Bank",
     "emergency": "Emergencies",
     "introduction": "Introducing Yourself",
-    "directions": "Asking for Directions"
+    "directions": "Asking for Directions",
+    "noScenarios": "No scenarios available for this level"
+  },
+  "lessons": {
+    "selectLesson": "Select a Lesson",
+    "noLessons": "No lessons available"
   },
   "lesson": {
     "listenAndRepeat": "Listen and repeat",
@@ -88,7 +94,9 @@
     "keepPracticing": "Keep practicing!",
     "step": "Step",
     "completed": "Lesson completed!",
-    "continueToNext": "Continue to next lesson"
+    "continueToNext": "Continue to next lesson",
+    "vocabulary": "Vocabulary",
+    "noContent": "No content available for this lesson"
   },
   "profile": {
     "title": "Your Profile",

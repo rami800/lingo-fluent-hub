@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useApp } from '@/context/AppContext';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { scenarios, scenarioTranslations } from '@/data/mockData';
+import { useScenarios } from '@/hooks/useScenarios';
 import { motion } from 'framer-motion';
-import { ChevronRight, Lock } from 'lucide-react';
-import type { GermanLevel } from '@/types';
+import { ChevronRight, Lock, Loader2 } from 'lucide-react';
 
 interface ScenarioListProps {
   onSelectScenario: (scenarioId: string) => void;
@@ -13,39 +12,51 @@ interface ScenarioListProps {
 
 export function ScenarioList({ onSelectScenario }: ScenarioListProps) {
   const { t } = useTranslation();
-  const { currentLevel, uiLanguage } = useApp();
+  const { currentLevel } = useApp();
+  const { data: scenarios, isLoading, error } = useScenarios();
 
-  const currentScenarios = scenarios.filter(s => s.levelId === currentLevel);
-
-  const getTranslation = (scenarioId: string) => {
-    return scenarioTranslations.find(
-      st => st.scenarioId === scenarioId && st.languageCode === uiLanguage
-    );
-  };
-
-  // Mock progress data
+  // Mock progress data for now
   const getProgress = (scenarioId: string) => {
-    const mockProgress: Record<string, number> = {
-      'introduction': 60,
-      'transport': 30,
-    };
-    return mockProgress[scenarioId] || 0;
+    return 0; // Will be replaced with real user progress later
   };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-12 text-destructive">
+        <p>{t('common.error')}</p>
+      </div>
+    );
+  }
+
+  if (!scenarios || scenarios.length === 0) {
+    return (
+      <div className="text-center py-12 text-muted-foreground">
+        <p>{t('scenarios.noScenarios')}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full">
       <div className="mb-6">
         <h2 className="text-xl font-bold">{currentLevel} {t(`levels.${currentLevel}.name`)}</h2>
         <p className="text-muted-foreground text-sm">
-          {currentScenarios.length} {t('common.lessons').toLowerCase()}
+          {scenarios.length} {t('common.scenarios').toLowerCase()}
         </p>
       </div>
 
       <div className="space-y-3">
-        {currentScenarios.map((scenario, index) => {
-          const translation = getTranslation(scenario.id);
+        {scenarios.map((scenario, index) => {
           const progress = getProgress(scenario.id);
-          const isLocked = index > 1 && progress === 0;
+          const isLocked = !scenario.isFree && index > 0 && progress === 0;
 
           return (
             <motion.div
@@ -55,8 +66,7 @@ export function ScenarioList({ onSelectScenario }: ScenarioListProps) {
               transition={{ delay: index * 0.05 }}
             >
               <Card
-                variant="lesson"
-                className={isLocked ? 'opacity-50' : ''}
+                className={`cursor-pointer transition-all hover:shadow-md ${isLocked ? 'opacity-50' : ''}`}
                 onClick={() => !isLocked && onSelectScenario(scenario.id)}
               >
                 <CardContent className="p-4 flex items-center gap-4">
@@ -65,10 +75,10 @@ export function ScenarioList({ onSelectScenario }: ScenarioListProps) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <CardTitle className="text-base truncate">
-                      {translation?.name || scenario.id}
+                      {scenario.name}
                     </CardTitle>
                     <p className="text-xs text-muted-foreground truncate">
-                      {translation?.description}
+                      {scenario.description}
                     </p>
                     {progress > 0 && (
                       <div className="mt-2">
