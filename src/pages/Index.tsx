@@ -8,11 +8,12 @@ import { ScenarioList } from '@/components/ScenarioList';
 import { LessonSelector } from '@/components/LessonSelector';
 import { LessonPlayer } from '@/components/LessonPlayer';
 import { BottomNav } from '@/components/BottomNav';
+import { HomePage } from '@/components/HomePage';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
 
-type Screen = 'welcome' | 'language' | 'level' | 'home' | 'scenario' | 'lesson';
+type Screen = 'welcome' | 'language' | 'level' | 'home' | 'scenarios' | 'scenario' | 'lesson';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -35,6 +36,10 @@ const Index = () => {
     setScreen('scenario');
   };
 
+  const handleStartLearning = () => {
+    setScreen('scenarios');
+  };
+
   const handleSelectLesson = (lessonId: string) => {
     setSelectedLesson(lessonId);
     setScreen('lesson');
@@ -42,6 +47,12 @@ const Index = () => {
 
   const handleLessonComplete = () => {
     setScreen('scenario');
+    setSelectedLesson(null);
+  };
+
+  const handleBackToScenarios = () => {
+    setScreen('scenarios');
+    setSelectedScenario(null);
     setSelectedLesson(null);
   };
 
@@ -109,6 +120,18 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+          >
+            <HomePage onStartLearning={handleStartLearning} />
+            <BottomNav />
+          </motion.div>
+        )}
+
+        {screen === 'scenarios' && (
+          <motion.div
+            key="scenarios"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="min-h-screen pb-24"
           >
             <header className="p-4 pt-6 flex items-center justify-between">
@@ -138,7 +161,7 @@ const Index = () => {
             <LessonSelector
               scenarioId={selectedScenario}
               onSelectLesson={handleSelectLesson}
-              onBack={handleBackToHome}
+              onBack={handleBackToScenarios}
             />
           </motion.div>
         )}
